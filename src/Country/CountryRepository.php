@@ -3,14 +3,14 @@
 namespace IanKok\SurfForecastApiClient\Country;
 
 use GuzzleHttp\Promise\PromiseInterface;
-use IanKok\SurfForecastApiClient\Client\SurfForecastClient;
+use IanKok\SurfForecastApiClient\Client\AuthenticatedSurfForecastClient;
 use IanKok\SurfForecastApiClient\Entities\Country;
 use Psr\Http\Message\ResponseInterface;
 
 class CountryRepository
 {
     /**
-     * @var SurfForecastClient
+     * @var AuthenticatedSurfForecastClient
      */
     protected $client;
 
@@ -22,10 +22,10 @@ class CountryRepository
     /**
      * CountryRepository constructor.
      *
-     * @param SurfForecastClient $client
+     * @param AuthenticatedSurfForecastClient $client
      * @param CountryMapper      $resultMapper
      */
-    public function __construct(SurfForecastClient $client, CountryMapper $resultMapper)
+    public function __construct(AuthenticatedSurfForecastClient $client, CountryMapper $resultMapper)
     {
         $this->client       = $client;
         $this->resultMapper = $resultMapper;

@@ -2,38 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="986c1d39-bf18-4cb9-989a-05ead24967bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/surf-forecast-api-client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/AuthenticatedSurfForecastClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/SurfForecastClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Contracts/WaveBreakMapper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Country/CountryMapper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Country/CountryRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entities/Country.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entities/Region.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entities/WaveBreak.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Region/RegionMapper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Region/RegionRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SurfForecastApiClientServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WaveBreak/ResponseInterpreter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WaveBreak/WaveBreakMapper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WaveBreak/WaveBreakRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WaveBreak/WaveBreakRepositoryAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/CountryRepositoryTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/WaveBreakRepositoryAdapterTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/WaveBreakRepositoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Forecast/ForeCastMapper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Country/CountryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Country/CountryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Forecast.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Forecast.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forecast/ForecastRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forecast/ForecastRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,9 +20,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/WaveBreak/WaveBreakMapper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+              <folding>
+                <element signature="e#58#110#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Region/RegionRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="-265">
               <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
               <folding>
                 <element signature="e#55#95#0#PHP" expanded="true" />
@@ -59,90 +44,85 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Region.php">
+        <entry file="file://$PROJECT_DIR$/src/WaveBreak/WaveBreakRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Region/RegionMapper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Unit/WaveBreakRepositoryAdapterTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="633">
+              <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
               <folding>
-                <element signature="e#60#119#0#PHP" expanded="true" />
+                <element signature="e#58#98#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WaveBreak/WaveBreakRepositoryAdapter.php">
+        <entry file="file://$PROJECT_DIR$/src/Forecast/ForecastRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
-              <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
+            <state relative-caret-position="540">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
-                <element signature="e#60#96#0#PHP" expanded="true" />
+                <element signature="e#57#129#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WaveBreak/ResponseInterpreter.php">
+        <entry file="file://$PROJECT_DIR$/src/Country/CountryMapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="679">
+              <caret line="55" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="55" selection-end-column="5" />
+              <folding>
+                <element signature="e#56#106#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SurfForecastApiClientServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/src/Forecast/ForeCastMapper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="573">
+              <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+              <folding>
+                <element signature="e#59#110#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WaveBreak/WaveBreakMapper.php">
+        <entry file="file://$PROJECT_DIR$/src/Country/CountryRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
-              <folding>
-                <element signature="e#58#110#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Client/SurfForecastClient.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Forecast.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Country.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -164,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/Client/AuthenticatedSurfForecastClient.php" />
         <option value="$PROJECT_DIR$/src/Entities/Country.php" />
         <option value="$PROJECT_DIR$/tests/Unit/CountryRepositoryTest.php" />
-        <option value="$PROJECT_DIR$/src/Country/CountryRepository.php" />
         <option value="$PROJECT_DIR$/src/Country/CountryMapper.php" />
         <option value="$PROJECT_DIR$/tests/Unit/WaveBreakRepositoryTest.php" />
         <option value="$PROJECT_DIR$/src/Exceptions/EntityNotAvailableException.php" />
@@ -183,6 +162,10 @@
         <option value="$PROJECT_DIR$/src/Entities/Region.php" />
         <option value="$PROJECT_DIR$/tests/Unit/WaveBreakRepositoryAdapterTest.php" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/src/Entities/Forecast.php" />
+        <option value="$PROJECT_DIR$/src/Country/CountryRepository.php" />
+        <option value="$PROJECT_DIR$/src/Forecast/ForecastRepository.php" />
+        <option value="$PROJECT_DIR$/src/Forecast/ForeCastMapper.php" />
       </list>
     </option>
   </component>
@@ -227,7 +210,7 @@
       <path value="$PROJECT_DIR$/vendor/paquettg/php-html-parser" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1033" />
     <option name="height" value="823" />
@@ -272,13 +255,13 @@
               <item name="surf-forecast-api-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="surf-forecast-api-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Region" type="462c0819:PsiDirectoryNode" />
+              <item name="Forecast" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="surf-forecast-api-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="surf-forecast-api-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="WaveBreak" type="462c0819:PsiDirectoryNode" />
+              <item name="Region" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="surf-forecast-api-client" type="b2602c69:ProjectViewProjectNode" />
@@ -369,14 +352,11 @@
       <workItem from="1551853758227" duration="5000" />
       <workItem from="1551853804372" duration="472000" />
       <workItem from="1552159800101" duration="260000" />
-      <workItem from="1552186151340" duration="166000" />
+      <workItem from="1552186151340" duration="1717000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WaveBreakRepositoryAdapterTest - 2019.03.04 at 12h 58m 11s.xml">
-      <configuration name="WaveBreakRepositoryAdapterTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="WaveBreakRepositoryAdapterTest - 2019.03.04 at 12h 59m 03s.xml">
       <configuration name="WaveBreakRepositoryAdapterTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -404,15 +384,17 @@
     <history-entry file="WaveBreakRepositoryAdapterTest - 2019.03.04 at 15h 07m 59s.xml">
       <configuration name="WaveBreakRepositoryAdapterTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="WaveBreakRepositoryAdapterTest - 2019.03.10 at 11h 09m 36s.xml">
+      <configuration name="WaveBreakRepositoryAdapterTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25108000" />
+    <option name="totallyTimeSpent" value="26659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20171674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -425,7 +407,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3048193" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3048193" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.28915662" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -496,27 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/AuthenticatedSurfForecastClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/SurfForecastClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Country.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/paquettg/php-html-parser/src/PHPHtmlParser/Dom/AbstractNode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -541,30 +502,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Country/CountryRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="e#56#96#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Exceptions/EntityNotAvailableException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Country/CountryMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="70" selection-start-line="54" selection-start-column="70" selection-end-line="54" selection-end-column="70" />
-          <folding>
-            <element signature="e#56#106#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -576,16 +517,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WaveBreak/WaveBreakMapperAdapter.php" />
-    <entry file="file://$PROJECT_DIR$/src/WaveBreak/WaveBreakRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
-          <folding>
-            <element signature="e#58#98#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/WaveBreakRepositoryTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -600,16 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Region/RegionRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-          <folding>
-            <element signature="e#55#95#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,13 +575,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WaveBreak/WaveBreakMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#58#110#0#PHP" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/src/SurfForecastApiClientServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="101" selection-start-line="1" selection-start-column="101" selection-end-line="1" selection-end-column="101" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -671,16 +595,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SurfForecastApiClientServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/WaveBreak/WaveBreakMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#58#110#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/WaveBreak/WaveBreakRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Country.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Forecast.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/SurfForecastClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/AuthenticatedSurfForecastClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Country/CountryRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Region/RegionRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-265">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding>
+            <element signature="e#55#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Country/CountryMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="e#56#106#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Forecast/ForecastRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#57#129#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Forecast/ForeCastMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+          <folding>
+            <element signature="e#59#110#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
