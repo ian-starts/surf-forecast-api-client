@@ -4,10 +4,12 @@ namespace IanKok\SurfForecastApiClient\WaveBreak;
 
 use GuzzleHttp\Promise\PromiseInterface;
 use IanKok\SurfForecastApiClient\Client\SurfForecastClient;
+use IanKok\SurfForecastApiClient\Contracts\IWaveBreakMapper;
+use IanKok\SurfForecastApiClient\Contracts\IWaveBreakRepository;
 use IanKok\SurfForecastApiClient\Region\RegionRepository;
 use Psr\Http\Message\ResponseInterface;
 
-class WaveBreakRepository
+class WaveBreakRepository implements IWaveBreakRepository
 {
     /**
      * @var SurfForecastClient
@@ -28,10 +30,9 @@ class WaveBreakRepository
      * WaveBreakRepository constructor.
      *
      * @param SurfForecastClient $client
-     * @param WaveBreakMapper    $resultMapper
-     * @param RegionRepository   $regionRepository
+     * @param IWaveBreakMapper   $resultMapper
      */
-    public function __construct(SurfForecastClient $client, WaveBreakMapper $resultMapper)
+    public function __construct(SurfForecastClient $client, IWaveBreakMapper $resultMapper)
     {
         $this->client       = $client;
         $this->resultMapper = $resultMapper;

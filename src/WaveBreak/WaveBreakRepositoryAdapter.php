@@ -7,18 +7,14 @@ namespace IanKok\SurfForecastApiClient\WaveBreak;
 use function GuzzleHttp\Promise\all;
 use GuzzleHttp\Promise\PromiseInterface;
 use IanKok\SurfForecastApiClient\Client\AuthenticatedSurfForecastClient;
+use IanKok\SurfForecastApiClient\Contracts\IWaveBreakRepositoryAdapter;
 use IanKok\SurfForecastApiClient\Entities\Region;
 use IanKok\SurfForecastApiClient\Entities\WaveBreak;
 use IanKok\SurfForecastApiClient\Region\RegionMapper;
 use Psr\Http\Message\ResponseInterface;
 
-class WaveBreakRepositoryAdapter
+class WaveBreakRepositoryAdapter extends WaveBreakRepository implements IWaveBreakRepositoryAdapter
 {
-
-    /**
-     * @var WaveBreakRepository
-     */
-    protected $waveBreakRepository;
 
     /**
      * @var WaveBreakMapper
@@ -43,24 +39,22 @@ class WaveBreakRepositoryAdapter
     /**
      * WaveBreakRepositoryAdapter constructor.
      *
-     * @param WaveBreakRepository             $waveBreakRepository
      * @param WaveBreakMapper                 $waveBreakMapper
      * @param RegionMapper                    $regionMapper
      * @param AuthenticatedSurfForecastClient $client
      * @param ResponseInterpreter             $interpreter
      */
     public function __construct(
-        WaveBreakRepository $waveBreakRepository,
         WaveBreakMapper $waveBreakMapper,
         RegionMapper $regionMapper,
         AuthenticatedSurfForecastClient $client,
         ResponseInterpreter $interpreter
     ) {
-        $this->waveBreakRepository = $waveBreakRepository;
         $this->waveBreakMapper     = $waveBreakMapper;
         $this->regionMapper        = $regionMapper;
         $this->client              = $client;
         $this->interpreter         = $interpreter;
+        parent::__construct($client, $waveBreakMapper);
     }
 
     /**
@@ -88,7 +82,7 @@ class WaveBreakRepositoryAdapter
                 if ($this->interpreter->interpret($response) === 'region') {
                     $promises = array_map(
                         function (Region $region) {
-                            return $this->waveBreakRepository->getByRegionIdAsync($region->getValue(), $region->getName());
+                            return parent::getByRegionIdAsync($region->getValue(), $region->getName());
                         },
                         $this->regionMapper->mapResponse($response)
                     );

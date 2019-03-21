@@ -2,11 +2,12 @@
 
 namespace IanKok\SurfForecastApiClient\Country;
 
+use IanKok\SurfForecastApiClient\Contracts\ICountryMapper;
 use IanKok\SurfForecastApiClient\Entities\Country;
 use PHPHtmlParser\Dom;
 use Psr\Http\Message\ResponseInterface;
 
-class CountryMapper
+class CountryMapper implements ICountryMapper
 {
     /**
      * @var Dom

@@ -2,13 +2,12 @@
 
 namespace IanKok\SurfForecastApiClient\Region;
 
-use IanKok\SurfForecastApiClient\Entities\Country;
+use IanKok\SurfForecastApiClient\Contracts\IRegionMapper;
 use IanKok\SurfForecastApiClient\Entities\Region;
-use IanKok\SurfForecastApiClient\Entities\WaveBreak;
 use PHPHtmlParser\Dom;
 use Psr\Http\Message\ResponseInterface;
 
-class RegionMapper
+class RegionMapper implements IRegionMapper
 {
     /**
      * @var Dom

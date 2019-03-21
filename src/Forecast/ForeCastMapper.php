@@ -4,12 +4,12 @@
 namespace IanKok\SurfForecastApiClient\Forecast;
 
 
+use IanKok\SurfForecastApiClient\Contracts\IForeCastMapper;
 use IanKok\SurfForecastApiClient\Entities\Forecast;
-use phpDocumentor\Reflection\Types\Integer;
 use PHPHtmlParser\Dom;
 use Psr\Http\Message\ResponseInterface;
 
-class ForeCastMapper
+class ForeCastMapper  implements IForeCastMapper
 {
     /**
      * @var Dom

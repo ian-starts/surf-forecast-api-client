@@ -6,7 +6,7 @@ use IanKok\SurfForecastApiClient\Entities\WaveBreak;
 use PHPHtmlParser\Dom;
 use Psr\Http\Message\ResponseInterface;
 
-class WaveBreakMapper implements \IanKok\SurfForecastApiClient\Contracts\WaveBreakMapper
+class WaveBreakMapper implements \IanKok\SurfForecastApiClient\Contracts\IWaveBreakMapper
 {
     /**
      * @var Dom

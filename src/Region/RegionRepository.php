@@ -4,10 +4,10 @@ namespace IanKok\SurfForecastApiClient\Region;
 
 use GuzzleHttp\Promise\PromiseInterface;
 use IanKok\SurfForecastApiClient\Client\SurfForecastClient;
-use IanKok\SurfForecastApiClient\Country\CountryMapper;
+use IanKok\SurfForecastApiClient\Contracts\IRegionRepository;
 use Psr\Http\Message\ResponseInterface;
 
-class RegionRepository
+class RegionRepository implements IRegionRepository
 {
     /**
      * @var SurfForecastClient
