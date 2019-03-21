@@ -9,7 +9,7 @@ use IanKok\SurfForecastApiClient\Entities\Forecast;
 use PHPHtmlParser\Dom;
 use Psr\Http\Message\ResponseInterface;
 
-class ForeCastMapper  implements IForeCastMapper
+class ForecastMapper  implements IForeCastMapper
 {
     /**
      * @var Dom

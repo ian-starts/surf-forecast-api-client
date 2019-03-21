@@ -2,7 +2,7 @@
 
 namespace  IanKok\SurfForecastApiClient\Test\Unit;
 
-use IanKok\SurfForecastApiClient\Forecast\ForeCastMapper;
+use IanKok\SurfForecastApiClient\Forecast\ForecastMapper;
 use IanKok\SurfForecastApiClient\Forecast\ForecastRepository;
 use IanKok\SurfForecastApiClient\Test\TestCase;
 use IanKok\SurfForecastApiClient\Test\TestLib\FakeClients\FakeSurfForecastClient;
@@ -19,7 +19,7 @@ class ForeCastRepositoryTest extends TestCase
         parent::setUp();
 
         $this->client = new FakeSurfForecastClient('/');
-        $this->foreCastRepository = new ForecastRepository($this->client, new ForeCastMapper(new Dom()));
+        $this->foreCastRepository = new ForecastRepository($this->client, new ForecastMapper(new Dom()));
     }
 
     /**

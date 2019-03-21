@@ -16,7 +16,7 @@ class ForecastRepository implements IForeCastRepository
     protected $client;
 
     /**
-     * @var ForeCastMapper
+     * @var ForecastMapper
      */
     protected $resultMapper;
 
@@ -24,9 +24,9 @@ class ForecastRepository implements IForeCastRepository
      * ForecastRepository constructor.
      *
      * @param AuthenticatedSurfForecastClient $client
-     * @param ForeCastMapper                  $resultMapper
+     * @param ForecastMapper                  $resultMapper
      */
-    public function __construct(AuthenticatedSurfForecastClient $client, ForeCastMapper $resultMapper)
+    public function __construct(AuthenticatedSurfForecastClient $client, ForecastMapper $resultMapper)
     {
         $this->client       = $client;
         $this->resultMapper = $resultMapper;

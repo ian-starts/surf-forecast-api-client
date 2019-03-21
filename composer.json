@@ -1,5 +1,5 @@
 {
-    "name": "iankok/surf-forecast-api-client",
+    "name": "iankok/surf-forecast-api-client-php",
     "description": "A scraper wrapper SDK for surf-forecast.com",
     "type": "library",
     "license": "MIT",
