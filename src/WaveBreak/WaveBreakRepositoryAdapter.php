@@ -76,7 +76,7 @@ class WaveBreakRepositoryAdapter extends WaveBreakRepository implements IWaveBre
     {
         return $this->client->requestAsync(
             'GET',
-            'http://www.surf-forecast.com/countries/' . $countyId . '/regions.js'
+            'countries/' . $countyId . '/regions.js'
         )->then(
             function (ResponseInterface $response) {
                 if ($this->interpreter->interpret($response) === 'region') {

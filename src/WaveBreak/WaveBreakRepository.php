@@ -47,7 +47,7 @@ class WaveBreakRepository implements IWaveBreakRepository
     {
         return $this->client->requestAsync(
             'GET',
-            'http://www.surf-forecast.com/regions/' . $countyId . '/breaks.js'
+            'regions/' . $countyId . '/breaks.js'
         )->then(
             function (ResponseInterface $response) use ($region) {
                 return $this->resultMapper->mapResponse($response, $region);

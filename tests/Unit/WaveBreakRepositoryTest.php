@@ -2,36 +2,34 @@
 
 namespace  IanKok\SurfForecastApiClient\Test\Unit;
 
-use function GuzzleHttp\Promise\all;
-use IanKok\SurfForecastApiClient\Client\SurfForecastClient;
-use IanKok\SurfForecastApiClient\Country\CountryMapper;
-use IanKok\SurfForecastApiClient\Country\CountryRepository;
-use IanKok\SurfForecastApiClient\Entities\Country;
 use IanKok\SurfForecastApiClient\Test\TestCase;
-use IanKok\SurfForecastApiClient\WaveBreak\RegionMapper;
-use IanKok\SurfForecastApiClient\WaveBreak\RegionRepository;
+use IanKok\SurfForecastApiClient\Test\TestLib\FakeClients\FakeSurfForecastClient;
+use IanKok\SurfForecastApiClient\WaveBreak\WaveBreakMapper;
+use IanKok\SurfForecastApiClient\WaveBreak\WaveBreakRepository;
 use PHPHtmlParser\Dom;
 
-class CountryRepositoryTest extends TestCase
+class WaveBreakRepositoryTest extends TestCase
 {
+    protected $client;
 
+    protected $waveBreakRepository;
+
+    protected function setUp()
+    {
+        parent::setUp();
+
+        $this->client                     = new FakeSurfForecastClient('/');
+        $this->waveBreakRepository = new WaveBreakRepository(
+            $this->client,
+            new WaveBreakMapper(new Dom())
+        );
+    }
     /**
      * @test
      */
     public function itCanListWaveBreaks()
     {
-        $client = new SurfForecastClient('http://www.surf-forecast.com/');
-        $mapper = new CountryMapper(new Dom());
-        $repo = new CountryRepository($client, $mapper);
-
-        $breakMapper = new RegionMapper(new Dom());
-        $breakRepo = new RegionRepository($client, $breakMapper);
-        $items = $repo->list();
-        $promises = array_map(function (Country $item) use ($breakRepo){
-            $break = $breakRepo->getByCountryId($item->getValue());
-            return $break;
-        }, $items);
-        all($promises)->wait();
-        var_dump($promises);
+        $waveBreakData =$this->waveBreakRepository->getByRegionId('1935', 'test');
+        $this->assertGreaterThan(0, count($waveBreakData));
     }
 }

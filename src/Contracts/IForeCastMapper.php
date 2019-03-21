@@ -6,5 +6,5 @@ use Psr\Http\Message\ResponseInterface;
 
 interface IForeCastMapper
 {
-    public function mapResponse(ResponseInterface $response, string $region): array;
+    public function mapResponse(ResponseInterface $response): array;
 }

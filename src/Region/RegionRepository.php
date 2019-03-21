@@ -40,7 +40,7 @@ class RegionRepository implements IRegionRepository
     {
         return $this->client->requestAsync(
             'GET',
-            'http://www.surf-forecast.com/countries/' . $countyId . '/regions.js'
+            'countries/' . $countyId . '/regions.js'
         )->then(
             function (ResponseInterface $response) {
                 return $this->resultMapper->mapResponse($response);

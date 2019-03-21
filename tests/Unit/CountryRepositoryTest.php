@@ -2,24 +2,32 @@
 
 namespace  IanKok\SurfForecastApiClient\Test\Unit;
 
-use IanKok\SurfForecastApiClient\Client\SurfForecastClient;
 use IanKok\SurfForecastApiClient\Country\CountryMapper;
 use IanKok\SurfForecastApiClient\Country\CountryRepository;
 use IanKok\SurfForecastApiClient\Test\TestCase;
+use IanKok\SurfForecastApiClient\Test\TestLib\FakeClients\FakeSurfForecastClient;
 use PHPHtmlParser\Dom;
 
 class CountryRepositoryTest extends TestCase
 {
+    protected $client;
+
+    protected $countryRepository;
+
+    protected function setUp()
+    {
+        parent::setUp();
+
+        $this->client = new FakeSurfForecastClient('');
+        $this->countryRepository = new CountryRepository($this->client, new CountryMapper(new Dom()));
+    }
 
     /**
      * @test
      */
     public function itCanListCountries()
     {
-        $client = new SurfForecastClient('http://www.surf-forecast.com/');
-        $mapper = new CountryMapper(new Dom());
-        $repo = new CountryRepository($client, $mapper);
-        $items = $repo->list();
-        var_dump('test');
+        $items = $this->countryRepository->list();
+        $this->assertGreaterThan(0, count($items));
     }
 }

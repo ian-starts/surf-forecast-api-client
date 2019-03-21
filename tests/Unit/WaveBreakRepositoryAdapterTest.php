@@ -4,9 +4,9 @@
 namespace IanKok\SurfForecastApiClient\Test\Unit;
 
 
-use IanKok\SurfForecastApiClient\Client\SurfForecastClient;
 use IanKok\SurfForecastApiClient\Region\RegionMapper;
 use IanKok\SurfForecastApiClient\Test\TestCase;
+use IanKok\SurfForecastApiClient\Test\TestLib\FakeClients\FakeSurfForecastClient;
 use IanKok\SurfForecastApiClient\WaveBreak\ResponseInterpreter;
 use IanKok\SurfForecastApiClient\WaveBreak\WaveBreakMapper;
 use IanKok\SurfForecastApiClient\WaveBreak\WaveBreakRepositoryAdapter;
@@ -14,17 +14,41 @@ use PHPHtmlParser\Dom;
 
 class WaveBreakRepositoryAdapterTest extends TestCase
 {
+
+    protected $client;
+
+    protected $waveBreakRepositoryAdapter;
+
+    protected function setUp()
+    {
+        parent::setUp();
+
+        $this->client                     = new FakeSurfForecastClient('/');
+        $this->waveBreakRepositoryAdapter = new WaveBreakRepositoryAdapter(
+            new WaveBreakMapper(new Dom()),
+            new RegionMapper(new Dom()),
+            $this->client,
+            new ResponseInterpreter()
+        );
+    }
+
     /**
      * @test
      */
-    public function itCanListWaveBreaks()
+    public function itCanListWaveBreaksFromNestedCall()
     {
-        $client = new SurfForecastClient('http://www.surf-forecast.com/');
-        $waveBreakMapper = new WaveBreakMapper(new Dom());
-        $regionMapper = new RegionMapper(new Dom());
-        $waveBreakRepositoryAdapter = new WaveBreakRepositoryAdapter($waveBreakMapper, $regionMapper, $client, new ResponseInterpreter());
-        $waveBreakData = $waveBreakRepositoryAdapter->getByCountryId('213');
-        var_dump($waveBreakData);
+        $waveBreakData              = $this->waveBreakRepositoryAdapter->getByCountryId('213');
+        $this->assertGreaterThan(0, count($waveBreakData));
+
+    }
+
+    /**
+     * @test
+     */
+    public function itCanListWaveBreaksFromFlatCall()
+    {
+        $waveBreakData              = $this->waveBreakRepositoryAdapter->getByCountryId('377');
+        $this->assertGreaterThan(0, count($waveBreakData));
 
     }
 }
