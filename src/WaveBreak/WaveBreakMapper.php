@@ -43,14 +43,17 @@ class WaveBreakMapper implements \IanKok\SurfForecastApiClient\Contracts\WaveBre
      */
     public function map(Dom\Collection $data, string $region): array
     {
-        $arrayList = [];
-        foreach ($data as $element) {
-            if ($element->text() === 'Choose') {
-                continue;
-            }
-            $arrayList[] = $this->mapEach($element, $region);
-        }
-        return $arrayList;
+        return array_map(
+            function ($element) use ($region) {
+                return $this->mapEach($element, $region);
+            },
+            array_filter(
+                $data->toArray(),
+                function ($element) {
+                    return $element->text() !== 'Choose';
+                }
+            )
+        );
     }
 
     /**

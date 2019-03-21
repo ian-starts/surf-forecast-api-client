@@ -38,11 +38,17 @@ class CountryMapper
      */
     public function map(Dom\Collection $data): array
     {
-        $arrayList = [];
-        foreach ($data as $element) {
-            $arrayList[] = $this->mapEach($element);
-        }
-        return $arrayList;
+        return array_map(
+            function ($element) {
+                return $this->mapEach($element);
+            },
+            array_filter(
+                $data->toArray(),
+                function ($element) {
+                    return $element->text() !== 'Choose';
+                }
+            )
+        );
     }
 
     /**

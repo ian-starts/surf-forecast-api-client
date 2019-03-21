@@ -40,14 +40,17 @@ class RegionMapper
      */
     public function map(Dom\Collection $data): array
     {
-        $arrayList = [];
-        foreach ($data as $element) {
-            if ($element->text() === 'Choose') {
-                continue;
-            }
-            $arrayList[] = $this->mapEach($element);
-        }
-        return $arrayList;
+        return array_map(
+            function ($element) {
+                return $this->mapEach($element);
+            },
+            array_filter(
+                $data->toArray(),
+                function ($element) {
+                    return $element->text() !== 'Choose';
+                }
+            )
+        );
     }
 
     /**
