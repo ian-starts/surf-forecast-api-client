@@ -32,9 +32,9 @@ class ForecastRepository
 
     public function get48Hrs($waveBreakSlug)
     {
-        $this->client->requestAsync('GET', 'breaks/' . $waveBreakSlug . '/forecasts/latest')->then(
+        return $this->client->requestAsync('GET', 'breaks/' . $waveBreakSlug . '/forecasts/latest')->then(
             function (ResponseInterface $response) {
-
+                return $this->resultMapper->mapResponse($response);
             }
         );
     }
