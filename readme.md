@@ -2,6 +2,8 @@
 
 A php Library for fetching wavebreak information from [surf-forecast](http://www.surf-forecast.com/).
 
+## Installation
+`composer require iankok/surf-forecast-api-client`
 ## Features
 - Fully async so blazing fast
 - Search by country
