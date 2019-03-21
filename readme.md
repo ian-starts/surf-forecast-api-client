@@ -6,6 +6,7 @@ A php Library for fetching wavebreak information from [surf-forecast](http://www
 - Fully async so blazing fast
 - Search by country
 - Service provider to be able to use in Laravel
+- Everything is poured in DDD design. So every call returns an array of typed classes. If you need different variables: feel free to make a PR or fork.
 
 ## Samples
 It's should be very easy use and implement in Laravel. Make sure you add 
