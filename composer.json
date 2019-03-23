@@ -1,5 +1,6 @@
 {
     "name": "iankok/surf-forecast-api-client-php",
+    "version": "1.0.1",
     "description": "A scraper wrapper SDK for surf-forecast.com",
     "type": "library",
     "license": "MIT",
@@ -9,10 +10,10 @@
             "email": "hello@iankok.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "guzzlehttp/guzzle": "^6.3",
-        "paquettg/php-html-parser": "dev-master"
+        "paquettg/php-html-parser": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5"
