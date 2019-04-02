@@ -2,7 +2,9 @@
 
 namespace IanKok\SurfForecastApiClient\WaveBreak;
 
+use IanKok\SurfForecastApiClient\Contracts\IImageRepository;
 use IanKok\SurfForecastApiClient\Entities\WaveBreak;
+use IanKok\SurfForecastApiClient\Image\ImageRepository;
 use PHPHtmlParser\Dom;
 use Psr\Http\Message\ResponseInterface;
 
@@ -14,11 +16,20 @@ class WaveBreakMapper implements \IanKok\SurfForecastApiClient\Contracts\IWaveBr
     protected $domParser;
 
     /**
+     * @var IImageRepository
+     */
+    protected $imageRepository;
+
+    /**
      * WaveBreakMapper constructor.
      *
      * @param Dom $domParser
      */
-    public function __construct(Dom $domParser) { $this->domParser = $domParser; }
+    public function __construct(Dom $domParser, IImageRepository $imageRepository)
+    {
+        $this->domParser = $domParser;
+        $this->imageRepository = $imageRepository;
+    }
 
 
     /**
@@ -65,6 +76,11 @@ class WaveBreakMapper implements \IanKok\SurfForecastApiClient\Contracts\IWaveBr
      */
     public function mapEach(Dom\HtmlNode $item, string $region): WaveBreak
     {
-        return new WaveBreak($item->text(), $item->getAttribute('value'), $region);
+        return new WaveBreak(
+            $item->text(),
+            $item->getAttribute('value'),
+            $region,
+            $this->imageRepository->getByWaveBreakSlug($item->getAttribute('value'))
+        );
     }
 }

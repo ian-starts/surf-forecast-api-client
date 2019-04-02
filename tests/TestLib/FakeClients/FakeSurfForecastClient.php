@@ -24,6 +24,8 @@ class FakeSurfForecastClient extends SurfForecastClient
             => 'tests/Data/wavebreaks.html',
             '/regions/1935/breaks.js'
             => 'tests/Data/wavebreaks.html',
+            '/breaks/Digger/photos'
+            => 'tests/Data/images.html',
         ],
 
     ];

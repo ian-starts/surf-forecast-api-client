@@ -2,6 +2,8 @@
 
 namespace  IanKok\SurfForecastApiClient\Test\Unit;
 
+use IanKok\SurfForecastApiClient\Image\ImageMapper;
+use IanKok\SurfForecastApiClient\Image\ImageRepository;
 use IanKok\SurfForecastApiClient\Test\TestCase;
 use IanKok\SurfForecastApiClient\Test\TestLib\FakeClients\FakeSurfForecastClient;
 use IanKok\SurfForecastApiClient\WaveBreak\WaveBreakMapper;
@@ -14,14 +16,17 @@ class WaveBreakRepositoryTest extends TestCase
 
     protected $waveBreakRepository;
 
+    protected $imageRepository;
+
     protected function setUp()
     {
         parent::setUp();
 
         $this->client                     = new FakeSurfForecastClient('/');
+        $this->imageRepository            = new ImageRepository($this->client, new ImageMapper(new Dom()));
         $this->waveBreakRepository = new WaveBreakRepository(
             $this->client,
-            new WaveBreakMapper(new Dom())
+            new WaveBreakMapper(new Dom(), $this->imageRepository)
         );
     }
     /**
