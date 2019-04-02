@@ -57,9 +57,9 @@ class WaveBreak
     }
 
     /**
-     * @return string | Image[]
+     * @return array | Image[]
      */
-    public function getImages(): string
+    public function getImages(): array
     {
         return $this->images;
     }
