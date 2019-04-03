@@ -33,11 +33,7 @@ class SurfForecastApiClientServiceProvider extends ServiceProvider
             function (Application $app) {
                 return new WaveBreakRepositoryAdapter(
                     new WaveBreakMapper(
-                        new Dom(),
-                        new ImageRepository(
-                            $app[AuthenticatedSurfForecastClient::class],
-                            new ImageMapper(new Dom())
-                        )
+                        new Dom()
                     ),
                     new RegionMapper(new Dom()),
                     $app[AuthenticatedSurfForecastClient::class],

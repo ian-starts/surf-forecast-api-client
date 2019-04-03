@@ -20,24 +20,17 @@ class WaveBreak
     protected $regionName;
 
     /**
-     * @var array | Image[]
-     */
-    protected $images;
-
-    /**
      * WaveBreak constructor.
      *
      * @param string $name
      * @param string $slug
      * @param string $regionName
-     * @param array  $images
      */
-    public function __construct(string $name, string $slug, string $regionName, array $images)
+    public function __construct(string $name, string $slug, string $regionName)
     {
         $this->name       = $name;
         $this->slug       = $slug;
         $this->regionName = $regionName;
-        $this->images     = $images;
     }
 
     /**
@@ -54,14 +47,6 @@ class WaveBreak
     public function getSlug(): string
     {
         return $this->slug;
-    }
-
-    /**
-     * @return array | Image[]
-     */
-    public function getImages(): array
-    {
-        return $this->images;
     }
 
     /**
